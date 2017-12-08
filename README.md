@@ -4,6 +4,8 @@ Youre welcome
 
 C++ used. Not the best, but not the worst code you ever seen.
 
+TODO: add additional materials about problems (like neerc, wiki, habr etc. links) 
+
 [Кормен (второе издание)](https://vk.com/doc141425588_450774270?hash=d1b363ef3a915d77ff&dl=89cbca136d715683fd)
 
 * [Lab1. Знакомство с проверяющей системой PCMS2.](Lab1) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-1.pdf)
