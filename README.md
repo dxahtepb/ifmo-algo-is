@@ -4,6 +4,8 @@ Youre welcome
 
 C++ used. Not the best, but not the worst code you ever seen.
 
+[Кормен (второе издание)](https://vk.com/doc141425588_450774270?hash=d1b363ef3a915d77ff&dl=89cbca136d715683fd)
+
 * [Lab 5. Двоичное дерево поиска. Интерпретатор языка Quack.](Lab5) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-5.pdf)
   * [Высота дерева (!)](Lab5/height.cpp)
   * [Проверка корректности](Lab5/is_bst.cpp)
