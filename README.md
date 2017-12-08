@@ -6,6 +6,14 @@ C++ used. Not the best, but not the worst code you ever seen.
 
 [Кормен (второе издание)](https://vk.com/doc141425588_450774270?hash=d1b363ef3a915d77ff&dl=89cbca136d715683fd)
 
+
+* [Lab2. Сортировка слиянием и быстрая сортировка.](Lab2) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-2.pdf)
+  * [Cортировка (!)](Lab2/sort.cpp)
+  * [Соревнования по бегу](Lab2/2b.cpp)
+  * [Число инверсий](Lab2/sort_invertions.cpp)
+  * [Анти-QuickSort](Lab2/anti_qs.cpp)
+  * [K-ая порядковая статистика](Lab2/order1.cpp)
+
 * [Lab3. Двоичный поиск, пирамидальная сортировка, цифровая сортировка.](Lab3) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-3.pdf)
   * [Двоичный поиск (!)](Lab3/bin_search.cpp)
   * [Гирлянда](Lab3/garland.cpp)
