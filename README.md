@@ -1,10 +1,17 @@
-# ITMO algorithm course (IS)
+# ITMO algorithms and Data Structures course (IS)
 
 Youre welcome
 
 C++ used. Not the best, but not the worst code you ever seen.
 
 [Кормен (второе издание)](https://vk.com/doc141425588_450774270?hash=d1b363ef3a915d77ff&dl=89cbca136d715683fd)
+
+* [Lab3. Двоичный поиск, пирамидальная сортировка, цифровая сортировка.](Lab3) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-3.pdf)
+  * [Двоичный поиск (!)](Lab3/bin_search.cpp)
+  * [Гирлянда](Lab3/garland.cpp)
+  * [Пирамида ли?](Lab3/is_heap.cpp)
+  * [Пирамидальная сортировка](Lab3/heapsort.cpp)
+  * [Цифровая сортировка](Lab3/radix.cpp)
 
 * [Lab4. Цифровая сортировка, стек и очередь.](Lab4) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-4.pdf)
   * [Стек (!)](Lab4/stack.cpp)
