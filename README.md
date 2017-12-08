@@ -6,6 +6,12 @@ C++ used. Not the best, but not the worst code you ever seen.
 
 [Кормен (второе издание)](https://vk.com/doc141425588_450774270?hash=d1b363ef3a915d77ff&dl=89cbca136d715683fd)
 
+* [Lab1. Знакомство с проверяющей системой PCMS2.](Lab1) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-1.pdf)
+  * [a + b](Lab1/aplusb.cpp)
+  * [a + b^2](Lab1/aplusbb.cpp)
+  * [Черепашка](Lab1/turtle.cpp)
+  * [Простая сортировка](Lab1/easy_sort.cpp)
+  * Знакомство с жителями Сортленда (missed)
 
 * [Lab2. Сортировка слиянием и быстрая сортировка.](Lab2) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-2.pdf)
   * [Cортировка (!)](Lab2/sort.cpp)
