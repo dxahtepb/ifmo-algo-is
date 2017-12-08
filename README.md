@@ -4,3 +4,6 @@ ITMO algorithm course (IS)
 
 
 Youre welcome
+
+
+C++ used
