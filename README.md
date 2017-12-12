@@ -1,7 +1,5 @@
 # ITMO algorithms and Data Structures course (IS)
 
-Youre welcome
-
 C++ used. Not the best, but not the worst code you ever seen.
 
 TODO: add additional materials about problems (like neerc, wiki, habr etc. links) 
@@ -47,3 +45,10 @@ TODO: add additional materials about problems (like neerc, wiki, habr etc. links
   * [Map](Lab6/map.cpp)
   * [LinkedMap](Lab6/linked_map.cpp)
   * [MultiMap](Lab6/multi_map.cpp)
+  
+* [Lab 7. AVL-дерево.](Lab7) - [Problems](http://neerc.ifmo.ru/teaching/is-algorithms/autumn/lab-7.pdf)
+  * [Проверка сбалансированности (!)](Lab7/avl_balance.cpp)
+  * [Делаю я левый поворот](Lab7/avl_rotate.cpp)
+  * [Вставка в АВЛ-дерево](Lab7/avl_insert.cpp)
+  * [Удаление из АВЛ-дерева ](Lab7/avl_deletion.cpp)
+  * [Упорядоченное множество на АВЛ-дереве](Lab7/AVL_set.cpp)
