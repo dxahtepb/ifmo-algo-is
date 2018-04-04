@@ -1,43 +1,90 @@
-#include <iostream>
-#include <vector>
 #include <fstream>
+#include <vector>
+#include <limits>
 #include <algorithm>
+#include <iostream>
+
+
+typedef std::vector< std::vector<int> > Graph;
+
 
 enum {WHITE, GRAY, BLACK};
 
-std::vector<int> components;
-std::vector<int> color;
-std::vector<int> order;
-std::vector< std::vector<int> > graph;
-std::vector< std::vector<int> > transposed_graph;
 
-bool dfs_sort(int v)
+bool dfs_sort(int v, Graph const & graph, std::vector<int> & color, std::vector<int> & order)
 {
     color[v] = BLACK;
 
-    for (int u : graph[v])
+    for (auto to : graph[v])
     {
-        if (color[u] == WHITE)
+
+        if (color[to] == WHITE)
         {
-            dfs_sort(u);
+            dfs_sort(to, graph, color, order);
         }
     }
 
     order.push_back(v);
 }
 
-bool dfs_transposed(int v, int component)
+
+bool dfs_transposed(int v, int component, Graph const & graph, std::vector<int> & color,
+                    std::vector<int> & components)
 {
     color[v] = BLACK;
     components[v] = component;
 
-    for (int u : transposed_graph[v])
+    for (auto to : graph[v])
     {
-        if (color[u] == WHITE)
+
+        if (color[to] == WHITE)
         {
-            dfs_transposed(u, component);
+            dfs_transposed(to, component, graph, color, components);
         }
     }
+}
+
+
+uint32_t condensation(Graph const & graph, std::vector<int> & components)
+{
+    size_t n_vertices = graph.size();
+
+    Graph transposed(n_vertices);
+
+    for (int from = 0; from < n_vertices; ++from)
+    {
+        for (auto to : graph[from])
+        {
+            transposed[to].push_back(from);
+        }
+    }
+
+    std::vector<int> color(n_vertices, WHITE);
+    std::vector<int> order;
+
+    for (int v = 0; v < n_vertices; ++v)
+    {
+        if (color[v] == WHITE)
+        {
+            dfs_sort(v, graph, color, order);
+        }
+    }
+
+    std::reverse(order.begin(), order.end());
+
+    color.assign(n_vertices, WHITE);
+
+    uint32_t current_component = 0;
+
+    for (int v : order)
+    {
+        if (color[v] == WHITE)
+        {
+            dfs_transposed(v, current_component++, transposed, color, components);
+        }
+    }
+
+    return current_component;
 }
 
 int main()
@@ -48,11 +95,10 @@ int main()
     unsigned int n_vertices = 0, n_edges = 0;
     file_in >> n_vertices >> n_edges;
 
-    graph.resize(n_vertices);
-    transposed_graph.resize(n_vertices);
-    color.resize(n_vertices, WHITE);
-    components.resize(n_vertices, -1);
-
+    std::vector<int> components(n_vertices);
+    std::vector<int> color(n_vertices);
+    std::vector<int> order(n_vertices);
+    std::vector< std::vector<int> > graph(n_vertices);
 
     for (int foo = 0; foo < n_edges; ++foo)
     {
@@ -60,34 +106,14 @@ int main()
         file_in >> from >> to;
 
         graph[from - 1].push_back(to - 1);
-        transposed_graph[to - 1].push_back(from - 1);
     }
 
-    for (int v = 0; v < n_vertices; ++v)
-    {
-        if (color[v] == WHITE)
-        {
-            dfs_sort(v);
-        }
-    }
+    int n_comp = condensation(graph, components);
 
-    std::reverse(order.begin(), order.end());
-
-    color.assign(n_vertices, WHITE);
-
-    int current_component = 1;
-    for (int v : order)
-    {
-        if (color[v] == WHITE)
-        {
-            dfs_transposed(v, current_component++);
-        }
-    }
-
-    file_out << current_component - 1 << '\n';
+    file_out << n_comp << '\n';
     for (int v : components)
     {
-        file_out << v << ' ';
+        file_out << v + 1 << ' ';
     }
 
     return 0;
