@@ -1,6 +1,6 @@
 # ITMO algorithms and Data Structures course (IS)
 
-C++ used. Not the best, but not the worst code you ever seen.
+C++ used. Not the best, but not the worst code you've ever seen.
 
 TODO: add additional materials about problems (like neerc, wiki, habr etc. links) 
 
